@@ -1,0 +1,25 @@
+{
+  "name": "image-compressor",
+  "version": "2.0.0",
+  "description": "本地图片压缩工具，保持高质量",
+  "main": "compress.js",
+  "bin": {
+    "imgc": "./cli.js"
+  },
+  "scripts": {
+    "compress": "node compress.js",
+    "link": "npm link"
+  },
+  "keywords": [
+    "image",
+    "compress",
+    "sharp",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "sharp": "^0.33.0",
+    "commander": "^11.1.0"
+  }
+}
