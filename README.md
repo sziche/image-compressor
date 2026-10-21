@@ -1,6 +1,6 @@
-# 本地图片压缩工具
+# local-image-compressor
 
-基于 Node.js + sharp 的高性能图片压缩工具，能够在保持高质量的同时有效减小文件大小。
+基于 Node.js + sharp 的高性能图片压缩工具，能够在保持高质量的同时有效减小文件大小。npm 包名为 `local-image-compressor`，全局命令为 `imgc`。
 
 ## 功能特性
 
@@ -19,9 +19,7 @@
 ### 全局安装（推荐）
 
 ```bash
-cd /Users/ziche/Desktop/image-compressor
-npm install
-npm link
+npm install -g local-image-compressor
 ```
 
 安装完成后，可以在任意目录使用 `imgc` 命令。
@@ -29,10 +27,19 @@ npm link
 ### 本地使用
 
 ```bash
-cd /Users/ziche/Desktop/image-compressor
+git clone https://github.com/he2635961521/image-compressor.git
+cd image-compressor
 npm install
+npm link
+```
+
+如果只想在项目内运行，也可以把图片放入 `input` 目录后执行：
+
+```bash
 npm run compress
 ```
+
+压缩后的图片会保存在 `output` 目录。
 
 ## 使用方法
 
@@ -71,7 +78,6 @@ imgc /path/to/images -n
 1. 将需要压缩的图片放入 `input` 目录
 2. 运行压缩命令：
    ```bash
-   cd /Users/ziche/Desktop/image-compressor
    npm run compress
    ```
 3. 压缩后的图片会保存在 `output` 目录
@@ -142,7 +148,8 @@ imgc image.jpg -q 75
 
 1. 安装依赖并创建全局链接：
    ```bash
-   cd /Users/ziche/Desktop/image-compressor
+   git clone https://github.com/he2635961521/image-compressor.git
+   cd image-compressor
    npm install
    npm link
    ```
@@ -161,16 +168,16 @@ imgc image.jpg -q 75
 
 如果不需要全局命令，可以卸载：
 ```bash
-npm unlink -g image-compressor
+npm unlink -g local-image-compressor
 ```
 
 ## 故障排除
 
 ### 命令找不到
 如果 `imgc` 命令找不到，请确保：
-1. 已运行 `npm link`
+1. 已运行 `npm link`，或已执行 `npm install -g local-image-compressor`
 2. npm 的全局 bin 目录在 PATH 中（通常在 `/usr/local/bin` 或 `~/.npm-global/bin`）
-3. 可以尝试使用 `npx imgc` 作为替代方案
+3. 可以尝试使用 `npx local-image-compressor` 作为替代方案
 
 ### 权限问题
 如果遇到权限问题，可以使用 `sudo`：

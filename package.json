@@ -1,25 +1,42 @@
 {
-  "name": "image-compressor",
-  "version": "2.0.0",
-  "description": "本地图片压缩工具，保持高质量",
-  "main": "compress.js",
-  "bin": {
-    "imgc": "./cli.js"
-  },
-  "scripts": {
-    "compress": "node compress.js",
-    "link": "npm link"
-  },
-  "keywords": [
-    "image",
-    "compress",
-    "sharp",
-    "cli"
-  ],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "sharp": "^0.33.0",
-    "commander": "^11.1.0"
-  }
+	"name": "local-image-compressor",
+	"version": "2.0.0",
+	"description": "本地图片压缩工具，保持高质量",
+	"main": "compress.js",
+	"files": [
+		"cli.js",
+		"compress.js"
+	],
+	"engines": {
+		"node": ">=18.17"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sziche/image-compressor.git"
+	},
+	"bugs": {
+		"url": "https://github.com/sziche/image-compressor/issues"
+	},
+	"homepage": "https://github.com/sziche/image-compressor#readme",
+	"author": "sziche",
+	"license": "MIT",
+	"bin": {
+		"imgc": "./cli.js"
+	},
+	"scripts": {
+		"compress": "node compress.js",
+		"prepublishOnly": "node cli.js --help",
+		"link": "npm link"
+	},
+	"keywords": [
+		"image",
+		"compress",
+		"sharp",
+		"cli"
+	],
+	"author": "",
+	"dependencies": {
+		"sharp": "^0.33.0",
+		"commander": "^11.1.0"
+	}
 }
