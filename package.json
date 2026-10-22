@@ -21,7 +21,7 @@
 	"author": "sziche",
 	"license": "MIT",
 	"bin": {
-		"imgc": "./cli.js"
+		"imgc": "cli.js"
 	},
 	"scripts": {
 		"compress": "node compress.js",

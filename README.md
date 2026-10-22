@@ -173,7 +173,7 @@ imgc /path/to/images -n
 ## 本地开发
 
 ```bash
-git clone https://github.com/he2635961521/image-compressor.git
+git clone https://github.com/sziche/image-compressor.git
 cd image-compressor
 npm install
 npm link
