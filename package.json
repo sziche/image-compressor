@@ -34,7 +34,6 @@
 		"sharp",
 		"cli"
 	],
-	"author": "",
 	"dependencies": {
 		"sharp": "^0.33.0",
 		"commander": "^11.1.0"
